@@ -1,0 +1,4 @@
+name: PerWorldChat
+version: ${project.version}
+main: me.four04.perworldchat.PerWorldChat
+api-version: 1.16
