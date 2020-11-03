@@ -7,7 +7,7 @@
 - 🤩 Linked Worlds
 
 ## Links
-- <img align="center" alt="Spigot" src="https://stipe.com.au/assets/images/products/spigot.png" height="24"/>    [Spigot Recourse](https://www.spigotmc.org/resources/perworldchat.85439/)
+- <img align="center" alt="Spigot" src="https://stipe.com.au/assets/images/products/spigot.png" height="24"/>    [Spigot Resource](https://www.spigotmc.org/resources/perworldchat.85439/)
 
 - <img align="center" alt="YouTube" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/YouTube_play_button_circular_%282013-2017%29.svg/1024px-YouTube_play_button_circular_%282013-2017%29.svg.png" height="24"/>    [YouTube](https://www.youtube.com/channel/UCSzLQed52dvtdJz7BkX6nBQ)
 
