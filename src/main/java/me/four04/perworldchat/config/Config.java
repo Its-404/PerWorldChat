@@ -33,10 +33,6 @@ public class Config extends ConfigProvider {
             for (String key : links.getKeys(false)) {
                 data.linkedWorlds.add(new LinkedWorlds(links.getStringList(key)));
             }
-
-            for (LinkedWorlds link : data.linkedWorlds) {
-                System.out.println("" + ChatColor.YELLOW + link.getLinkedWorldNames());
-            }
         }
     }
 }
