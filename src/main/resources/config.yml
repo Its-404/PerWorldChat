@@ -1,0 +1,23 @@
+# +----------------------------------------------------+
+# <          PerWorldChat - Paper 1.16 Plugin          >
+# <           Made by 404NotFound aka Its404           >
+# +----------------------------------------------------+
+
+settings:
+  # When set to true, you will not need to create a link in order to connect nether/end dimensions to the over-world.
+  # Recommended Setting: true
+  auto-detect-alt-dimensions: true
+
+# To create a separate link/group, copy and paste "example_link".
+# You may delete "example_link" if it is no longer needed.
+# IMPORTANT: The name of a link does not matter, HOWEVER, no two links should share the same name!
+links:
+  example_link:
+    - 'example_world1'
+    - 'example_world2'
+    - 'example_world3'
+
+  example_link2:
+    - 'example_world4'
+    - 'example_world5'
+    - 'example_world6'
