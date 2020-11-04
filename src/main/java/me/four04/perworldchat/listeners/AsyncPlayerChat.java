@@ -49,6 +49,12 @@ public class AsyncPlayerChat implements Listener {
     }
 
     private boolean altDimensionDetected(String origin, String name) {
-        return Config.data.autoDetectEnabled && (origin.equalsIgnoreCase(name + "_nether") || origin.equalsIgnoreCase(name + "_the_end"));
+        if (Config.data.autoDetectEnabled) {
+            if (origin.equalsIgnoreCase(name + "_nether") || origin.equalsIgnoreCase(name + "_the_end")) {
+                return true;
+            }
+            else return name.toLowerCase().replace("_nether", "").replace("_the_end", "").equalsIgnoreCase(origin);
+        }
+        return false;
     }
 }
