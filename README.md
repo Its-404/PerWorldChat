@@ -4,7 +4,7 @@
 - 🙂 Easy to use; just drag and drop into your plugins folder. No configuration is needed!
 
 ## Coming Soon
-- 🤩 Linked Worlds
+- 🤩 Global Chat Command
 
 ## Links
 - <img align="center" alt="Spigot" src="https://stipe.com.au/assets/images/products/spigot.png" height="24"/>    [Spigot Resource](https://www.spigotmc.org/resources/perworldchat.85439/)
