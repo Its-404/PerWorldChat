@@ -1,6 +1,5 @@
 package me.four04.perworldchat.config;
 
-import org.bukkit.ChatColor;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,7 +13,7 @@ public class Config extends ConfigProvider {
 
     public static class Data {
         public boolean autoDetectEnabled;
-        public List<LinkedWorlds> linkedWorlds = new ArrayList<>();
+        public List<LinkedWorld> linkedWorlds = new ArrayList<>();
     }
 
     public Config(JavaPlugin plugin) {
@@ -31,7 +30,7 @@ public class Config extends ConfigProvider {
         ConfigurationSection links = this.yaml.getConfigurationSection("links");
         if (links != null) {
             for (String key : links.getKeys(false)) {
-                data.linkedWorlds.add(new LinkedWorlds(links.getStringList(key)));
+                data.linkedWorlds.add(new LinkedWorld(links.getStringList(key)));
             }
         }
     }

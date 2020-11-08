@@ -2,7 +2,7 @@ package me.four04.perworldchat.listeners;
 
 import me.four04.perworldchat.PerWorldChat;
 import me.four04.perworldchat.config.Config;
-import me.four04.perworldchat.config.LinkedWorlds;
+import me.four04.perworldchat.config.LinkedWorld;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -20,8 +20,8 @@ public class AsyncPlayerChat implements Listener {
         World origin = event.getPlayer().getWorld();
         Set<Player> recipients = event.getRecipients();
 
-        LinkedWorlds link = null;
-        for (LinkedWorlds lw : Config.data.linkedWorlds) {
+        LinkedWorld link = null;
+        for (LinkedWorld lw : Config.data.linkedWorlds) {
             List<World> worlds = PerWorldChat.worldUtil().getWorldsByName(lw.getLinkedWorldNames());
 
             if (worlds != null && worlds.contains(origin)) {
