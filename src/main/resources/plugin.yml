@@ -2,3 +2,12 @@ name: PerWorldChat
 version: ${project.version}
 main: me.four04.perworldchat.PerWorldChat
 api-version: 1.16
+
+commands:
+  global:
+    usage: /<command> <message>
+    description: Broadcasts a message across all worlds
+permissions:
+  pwc.global:
+    description: Allows usage of the 'global' chat command.
+    default: op

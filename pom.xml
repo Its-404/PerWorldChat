@@ -6,7 +6,7 @@
 
     <groupId>PerWorldChat</groupId>
     <artifactId>PerWorldChat</artifactId>
-    <version>XI</version>
+    <version>XII</version>
     <packaging>jar</packaging>
 
     <name>PerWorldChat</name>
