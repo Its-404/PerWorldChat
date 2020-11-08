@@ -5,7 +5,7 @@ api-version: 1.16
 
 commands:
   global:
-    usage: /<command> <message>
+    usage: /global <message>
     description: Broadcasts a message across all worlds
 permissions:
   pwc.global:
