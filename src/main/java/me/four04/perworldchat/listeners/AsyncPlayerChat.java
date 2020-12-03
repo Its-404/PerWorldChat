@@ -20,6 +20,7 @@ public class AsyncPlayerChat implements Listener {
         World origin = event.getPlayer().getWorld();
         Set<Player> recipients = event.getRecipients();
 
+        // TODO: fix bug where only one link is found and accessed. multiple may exist.
         LinkedWorld link = null;
         for (LinkedWorld lw : Config.data.linkedWorlds) {
             List<World> worlds = PerWorldChat.worldUtil().getWorldsByName(lw.getLinkedWorldNames());
