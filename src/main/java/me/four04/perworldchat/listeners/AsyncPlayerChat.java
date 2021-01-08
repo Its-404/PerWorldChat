@@ -10,6 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -20,7 +21,6 @@ public class AsyncPlayerChat implements Listener {
         World origin = event.getPlayer().getWorld();
         Set<Player> recipients = event.getRecipients();
 
-        // TODO: fix bug where only one link is found and accessed. multiple may exist.
         LinkedWorld link = null;
         for (LinkedWorld lw : Config.data.linkedWorlds) {
             List<World> worlds = PerWorldChat.worldUtil().getWorldsByName(lw.getLinkedWorldNames());
@@ -39,12 +39,19 @@ public class AsyncPlayerChat implements Listener {
             }
         }
 
-        for (Player recipient : recipients) {
+        //FIX: concurrentModification error caused plugin to not function as intended
+        Set<Player> iterRec = new HashSet<Player>(); //created a new temporary recipients list (for iterator)
+        iterRec.addAll(recipients); //copy the original set to this one
+
+        for (Player recipient : iterRec) { //iterate thru copied set
             World world = recipient.getWorld();
-            if (this.altDimensionDetected(origin.getName(), world.getName())) continue;
+
+            if (this.altDimensionDetected(origin.getName(), world.getName()))
+            	continue;
 
             if (!world.equals(origin) && !linkedWorlds.contains(world)) {
-                recipients.remove(recipient);
+                recipients.remove(recipient); //remove recipient from core set, leaving iterating set unchanged
+
             }
         }
     }
