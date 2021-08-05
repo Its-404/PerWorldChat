@@ -28,7 +28,7 @@ public class Global implements CommandExecutor {
                 return false;
             }
 
-            String message = String.join("", args);
+            String message = String.join(" ", args); //Made delimiter a space (for parsing global messages)
             String broadcast = this.prefix + ChatColor.DARK_AQUA + player.getName() + ": " + ChatColor.RESET + message;
 
             for (Player p : PerWorldChat.server.getOnlinePlayers()) {
